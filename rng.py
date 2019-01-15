@@ -6,7 +6,7 @@ from project.random_name_generator import RandomNameGenerator
 PARSER = argparse.ArgumentParser(description='Random Name Generator')
 PARSER.add_argument('numgen', type=int, nargs='?',
                     help='The number of names to generate. Defaults to 10.')
-PARSER.add_argument('-f', '--file', required=True,
+PARSER.add_argument('-f', '--file',
                     help='The file containing plain text sample data of names.')
 PARSER.add_argument('-m', '--max-length', type=int, nargs='?', const=7,
                     help='Specifies a maximum length for generated names.')

@@ -27,6 +27,10 @@ class RandomNameGenerator:
         three_letter_cumulative_strategy = ThreeLetterCumulativeStrategy()
         file_data_loader = FileDataLoader()
 
+        # Default if file is not given
+        if params.get('file') is None:
+            params['file'] = 'greek_gods'
+
         # Initialize pair probability table
         self.pair_pr_table = CumulativeProbabilityTable(
             two_letter_length_strategy, two_letter_cumulative_strategy, file_data_loader)
